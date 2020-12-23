@@ -130,7 +130,7 @@ void* SearchTelephoneRecord(TelephoneRecord *pattern) {
         if (checkRecord(record, pattern))
             result->push_back(std::shared_ptr<TelephoneRecord>(record));
         else
-            free(record);
+            delete(record);
     }
     
     return result;
